@@ -4,6 +4,9 @@ services:
   server:
     image: portal_backend_image
     container_name: portal_backend
+    volumes:
+      - data-volume:/usr/src/app/src/reportHolder
+      - data-volume:/usr/src/app/src/screenshots
     ports:
       - "3000:3000"
     depends_on:
